@@ -1,0 +1,13 @@
+.flash_card_with_meaning{
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    position: relative;
+    width: 350px;
+    cursor: pointer;
+}
+.flash_card_with_meaning .flash_card_check{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+

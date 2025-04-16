@@ -1,0 +1,17 @@
+.img_card{
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.img_card_img{
+    width: 100%;
+    margin: auto;
+}
+.img_card_img_cont{
+    width: 350px;
+    overflow: hidden;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,189 @@
+
+
+#navbar{
+    width: 100%!important;
+    border-bottom: 1px var(--color-secondary) solid;
+    position: fixed;
+    background-color: var(--bs-dark);
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#navbar .inner_navbar{
+    display: flex;
+}
+#navbar .inner_navbar > *{
+    flex: 1;
+}
+#navbar .navbar_header{
+    flex: 1;
+    margin: auto;
+}
+#navbar .navbar_menu{
+    display: flex;
+
+}
+#navbar .navbar_menu .inner_menu_cont{
+    display: flex;
+    flex: 2;
+    overflow: hidden;
+    height: 100%;
+    margin: auto;
+}
+.navbar_item{
+    justify-content: center;
+    align-items: center;
+    margin: auto 20px;
+    text-decoration: none;
+    border-bottom: 3px transparent solid;
+    height: 100%;
+    display: grid;
+    position: relative;
+}
+.navbar_item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Position below the text */
+    transform: translateX(-50%);
+    width: 0px; /* Width of the oval underline */
+    height: 8px; /* Height of the oval underline */
+    background-color: #8a8cff; /* Adjust color to match the image */
+    border-radius: 20px; /* Makes the underline oval-shaped */
+    transition: all 0.3s ease;
+  }
+.navbar_item:hover::after{
+    width: 40px;
+}
+#navbar .navbar_search{
+    flex: 3;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: calc(100% - 30px) 30px;
+    
+}
+#navbar .navbar_search_input{
+    height: 40px;
+    padding: 0px;
+    padding-left: 10px;
+    border: 0px #000 solid;
+    border-right: 0px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: var(--color-secondary);
+    color: var(--bs-light)!important;
+    margin: 10px 0px;
+}
+
+#navbar .navbar_search_input::placeholder{
+    color: #a8a8a8!important;
+    text-transform: uppercase;
+}
+#navbar .navbar_search_input:hover{
+    outline: none;
+}
+#navbar .navbar_search_input:focus{
+    outline: none;
+}
+#navbar #navbar_search_btn{
+    border: 0px #000 solid;
+    height: 40px;
+    border-left: 0px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--color-secondary);
+}
+
+#navbar .account_action a{
+    height: 40px;
+    display: flex;
+    margin: auto;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: var(--bs-light);
+}
+#navbar .account_action a:hover{
+    border: 1px var(--bs-light) solid;
+    color: var(--bs-light);
+    background: transparent;
+}
+.nav_on_toggle_btn{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .navbar_active{
+        display: block!important;
+    }
+    .navbar_header{
+        display: flex!important;
+    }
+    .nav_on_toggle_btn{
+        display: block;
+        padding-right: 10px;
+    }
+    #navbar .inner_navbar{
+        display: grid!important;
+        padding-top: 10px;
+        grid-template-columns: 90px calc(100% - 180px) 90px;
+    }
+    #navbar .navbar_menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        z-index: 2;
+        height: 100vh;
+        background-color: var(--bs-dark);
+    }
+    .navbar_item{
+        height: fit-content!important;
+        justify-content: start;
+        font-size: 22px;
+        margin: 10px 10px;
+    }
+    .navbar_item::after{
+        height: 100%;
+        left: -5px!important;
+        top: 0px;
+        bottom: 0px;
+    }
+    .navbar_item:hover::after{
+        width: 5px;
+    }
+    #navbar .inner_menu_cont{
+        padding-top: 50px;
+        display: block!important;
+        flex-direction: column;
+        height: 300px!important;
+        width: 300px;
+        overflow: visible;
+        margin: 0px!important;
+    }
+    #navbar .navbar_search{
+        grid-column: 1/4;
+    }
+    #navbar .account_action{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .nav_toggle_btn{
+        display: flex!important;
+        font-size: 30px;
+        z-index: 3;
+        outline: 3px var(--bs-light) solid;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        right: 10px;
+        top: 30px;
+        scale: 0.8;
+    }
+    .nav_toggle_btn i{
+        margin: auto;
+    }
+}

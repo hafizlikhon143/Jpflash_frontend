@@ -1,0 +1,44 @@
+.option_container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+.options{
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px auto;
+    color: var(--color-primary);
+    text-decoration: none;
+    position: relative;
+}
+.options::after{
+    content: "";
+    background: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    z-index: 0;
+    height: 10px;
+    border-radius: 15px;
+    width: 0px;
+    transition: all ease-in-out 0.1s;
+}
+.options:hover.options::after{
+    width: 50px;
+    left: calc(50% - 25px);
+}
+.option_title{
+    padding-top: 10px;
+    text-align: center;
+}
+.options img{
+    height: 30px;
+    margin: auto;
+}

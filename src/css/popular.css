@@ -1,0 +1,39 @@
+.Popular_container{
+    position: relative;
+}
+.Popular_card_container{
+    display: inline-flex;
+}
+.Popular_container .container{
+    overflow-x: scroll;
+}
+
+.Popular_container  .container::-webkit-scrollbar{
+    height: 3px;
+}
+.Popular_container  .container::-webkit-scrollbar-thumb{
+    background-color: #fff;
+}
+.Popular_container  .container::-webkit-scrollbar-track{
+    background-color: var(--color-secondary);
+}
+
+.Popular_container .Popular_btn{
+    position: absolute;
+    border: 1px var(--color-secondary) solid;
+    background: #000000e5;
+    width: 50px;
+    height: 50px;
+    color: var(--bs-light);
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.left_btn{
+    top: 55%;
+    left: -20px;
+}
+.right_btn{
+    top: 55%;
+    right: -20px;
+}

@@ -1,0 +1,128 @@
+.card_content_f {
+    height: 350px;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    position: absolute;
+    background-color: #575757af;
+    width: 100%;
+}
+
+.flash_card_words {
+    position: relative!important;
+    height: 350px;
+    content: "";
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+#study_flash_card {
+    height: 500px;
+    perspective: 1000px;
+}
+
+#study_container .inner_container {
+    transform-style: preserve-3d;
+}
+
+/* New class for flipping the card upside down */
+.flip_card {
+    transform: rotateX(180deg);
+}
+
+#card_content_back {
+    transform: rotateX(180deg);
+}
+
+/* flash card settings css */
+.flash_card_settings{
+    display: flex;
+}
+.flash_card_settings .navigate_btns{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+.navigate_btns .flash_card_counter_cont{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    font-size: 24px;
+}
+.nav_flash_card{
+    height: 50px;
+    border: 3px #fff solid;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+}
+.nav_flash_card:hover{
+    background-color: #5757575d;
+}
+.active_play{
+    background-color: #5757575d;
+}
+.nav_flash_card img{
+    width: 40px;
+}
+.nav_play_btn{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.nav_play_btn:hover{
+    background: #5757575d;
+}
+.nav_play_btn img{
+    width: 70px;
+    margin: auto;
+}
+.flash_card_animate{
+    animation: change 0.3s ease-in 0s 1 forwards alternate;
+}
+.flash_card_animate_oposite{
+    animation: change_oposite 0.3s ease-in 0s 1 forwards alternate;
+}
+
+@keyframes change {
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    25%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    75%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes change_oposite {
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    25%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    75%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}

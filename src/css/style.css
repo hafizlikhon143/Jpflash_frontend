@@ -1,0 +1,52 @@
+:root{
+    --color-secondary: #ffffff34;
+    --color-primary: #fff;
+}
+
+body{
+    background: var(--bs-dark);
+    color: var(--bs-light);
+    scroll-behavior: smooth;
+}
+#root{
+    margin-top: 66px;
+}
+.prime_header{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.prime_desc{
+    color: #ffffffb9;
+    font-size: 18px;
+    font-style: lighter;
+}
+.round_button{
+    width: 50px;
+    height: 50px;
+    border: 3px var(--color-primary) solid;
+    border-radius: 50%;
+    background-color: transparent;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    content: url(../img/icons/arrow-left.svg);
+    opacity: 0.8;
+}
+.round_button:hover{
+    opacity: 1;
+}
+.rounded_button{
+    border: 0px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    border-radius: 25px;
+    padding: 0 30px;
+    margin: auto;
+}
+.rounded_button:hover{
+    opacity: 0.9;
+    scale: 1.01;
+}

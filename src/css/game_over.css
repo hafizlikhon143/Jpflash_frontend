@@ -1,0 +1,31 @@
+@import url("../css/game_over.css");
+
+.game_over_pannel{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.game_over_pannel h1{
+    margin: auto;
+    padding-bottom: 20px;
+}
+.game_over_pannel .s_display{
+    margin: auto;
+    padding: 20px;
+    background: var(--color-secondary);
+    border-radius: 15px;
+    width: 300px;
+}
+.game_over_pannel .s_display .prime_header{
+    text-align: center;
+    border-bottom: 5px var(--color-primary) dotted;
+    text-transform: uppercase;
+}
+.s_display_value{
+    /* text-align: right; */
+    padding-top: 10px;
+}
+.s_display_btn{
+    margin: auto;
+    scale: 0.7;
+}

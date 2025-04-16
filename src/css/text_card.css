@@ -1,0 +1,29 @@
+.text_card{
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    width: 350px;
+    margin-right: 10px;
+    border-bottom: 0px var(--bs-light) solid;
+    transition: all 0.5 ease-in-out ;
+    text-decoration: none;
+}
+.text_card:hover{
+    border-bottom: 3px var(--bs-light) solid;
+}
+.text_card_count{
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 15px;
+    font-weight: bolder;
+    color: var(--bs-light)!important;
+    background-color: var(--color-secondary);
+    font-size: 12px;
+}
+.text_card_title{
+    font-weight: bold;
+}
+.text_card .special_txt{
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+    border-radius: 15px;
+}

@@ -1,0 +1,126 @@
+@import url("../css/style.css");
+.matching_intro_back_btn{
+    position: absolute;
+    border: 0px!important;
+    left: 10px;
+}
+.matching_intro_cont{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.matching_intro_cont > *{
+    margin: 10px auto;
+}
+.matching_intro_desc{
+    text-align: center;
+    width: 300px;
+}
+.matching_intro_settings{
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--color-secondary);
+    width: 300px;
+}
+.matching_intro_settings .matching_intro_option{
+    display: flex;
+    margin-top: 5px;
+}
+.matching_intro_settings .matching_intro_lable{
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+.matching_intro_value input, #matching_lesson_value{
+    width: 125px;
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 1px var(--color-secondary) solid;
+    color: #fff;
+}
+#matching_lesson_value option{
+    color: #000;
+}
+
+/* matching games flash card */
+.matching_game_set{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: var(--color-secondary);
+    padding: 10px;
+}
+.matching_flash_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 15px;
+    background-color: var(--color-secondary);
+    overflow: hidden;
+    transition: all 0.5s;
+    scale: 1;
+}
+.matching_game_header{
+    text-align: center;
+}
+.matching_game_desc{
+    text-align: center;
+}
+.card_wrong{
+    background-color: #ff0000;
+}
+.selected{
+    background-color: #5757575d!important;
+}
+.card_right{
+    background-color: #00ff00;
+}
+.card_hidden{
+    scale: 0;
+}
+.score_pannel{
+    display: flex;
+    position: fixed;
+    width: fit-content;
+    right: 10px;
+    top: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--color-secondary);
+
+}
+.score_right{
+    color: #00ff00;
+    border-right: 1px solid var(--color-primary);
+    padding-right: 10px;
+}
+.score_wrong{
+    color: #ff0000;
+    padding-left: 10px;
+}
+@media screen and (max-width: 768px){
+    .matching_intro_cont{
+        margin-top: 120px;
+    }
+    .matching_game_cont{
+        margin-top: 120px;
+    }
+    .matching_flash_card{
+        min-height: 100px;
+    }
+    .matching_game_set{
+        
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
